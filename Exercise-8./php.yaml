@@ -1,0 +1,35 @@
+-
+  name: testing
+  hosts: Httpd
+  tasks:
+    - name: Install Httpd and PhP
+      yum:
+        name:
+             - httpd
+             - php
+        state: present 
+   
+    - name: Start httpd service
+      service:
+        name: httpd
+        state: started
+    - name: Enable httpd service
+      service:
+        name: httpd
+        enabled: yes
+    - name: Set timezone to Africa/Lagos
+      timezone:
+        name: Africa/Lagos
+          
+    - name: Ansible replace index.html to index.php in http config file
+      replace:
+        path: /etc/httpd/conf/httpd.conf
+        regexp: "index.html"
+        replace: "index.php"
+
+    - name: Copy php file to target
+      copy:
+        src: /home/vagrant/ansible-php/index.php
+        dest: /var/www/html/
+        mode: '0644'  
+
