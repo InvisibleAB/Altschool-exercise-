@@ -75,7 +75,7 @@ sudo systemctl enable mysql
 #### 10. Create databse
 Login to mysql 
 ```
-sudo  mysql -u root -p
+sudo  mysql -u root 
 ```
 Create database and user which will later be used 
 ```
@@ -152,7 +152,7 @@ php artisan migrate:fresh
 #### 16. Configure Apache to Host Laravel
 Create Apache Virtual host configuration file for laravel
 ```
-sudo vi /etc/apapche2/sites-available/laravel.conf
+sudo vi /etc/apache2/sites-available/laravel.conf
 ```
 Add the following to the file
 ```php
