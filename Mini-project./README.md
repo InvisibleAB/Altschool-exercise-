@@ -137,8 +137,8 @@ DB_CONNECTION=mysql
 DB_HOST=localhost
 DB_PORT=3306
 DB_DATABASE= "Input your database name here"
-DB_USERNAME= " "Input your database username here"
-DB_PASSWORD=e"Input your mysql user password here"
+DB_USERNAME= "Input your database username here"
+DB_PASSWORD= "Input your mysql user password here"
 ```
 
 #### 15. Composer
